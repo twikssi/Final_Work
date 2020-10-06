@@ -1,12 +1,11 @@
-package by.twikss.finalwork.service;
+package by.twikss.finalwork.logics.service;
 
-import by.twikss.finalwork.bean.Product;
+import by.twikss.finalwork.logics.bean.Product;
 import by.twikss.finalwork.database.DataBase;
-import by.twikss.finalwork.enums.Category;
+import by.twikss.finalwork.logics.enums.Category;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.xml.crypto.Data;
 import java.math.BigDecimal;
 
 import static org.junit.Assert.*;
@@ -45,9 +44,17 @@ public class ProductServiceTest {
         assertEquals(true,ProductService.getProductById(dataBaseProducts.getBaseOfProduct(),4l).equals(pineapple));
     }
 
-
     @Test
-    public void getAllProductsTest() {
-        ProductService.getAllProducts(dataBaseProducts.getBaseOfProduct());
+    public void deleteProductByIdTest() {
+        Product orange = Product.builder()
+                .id(3l)
+                .name("Orange")
+                .price(BigDecimal.valueOf(78.90))
+                .category(Category.FRUIT)
+                .build();
+
+        ProductService.deleteProductById(dataBaseProducts.getBaseOfProduct(), 3l);
+        assertFalse(dataBaseProducts.getBaseOfProduct().contains(orange));
+
     }
 }

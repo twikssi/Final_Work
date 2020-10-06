@@ -1,4 +1,4 @@
-package by.twikss.finalwork.enums;
+package by.twikss.finalwork.logics.enums;
 
 public enum Category {
     FRUIT, VEGETABLES;

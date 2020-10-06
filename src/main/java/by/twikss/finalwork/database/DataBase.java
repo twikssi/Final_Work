@@ -1,7 +1,7 @@
 package by.twikss.finalwork.database;
 
-import by.twikss.finalwork.bean.Product;
-import by.twikss.finalwork.enums.Category;
+import by.twikss.finalwork.logics.bean.Product;
+import by.twikss.finalwork.logics.enums.Category;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

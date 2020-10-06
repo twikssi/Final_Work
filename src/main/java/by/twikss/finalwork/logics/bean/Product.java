@@ -1,6 +1,6 @@
-package by.twikss.finalwork.bean;
+package by.twikss.finalwork.logics.bean;
 
-import by.twikss.finalwork.enums.Category;
+import by.twikss.finalwork.logics.enums.Category;
 import lombok.Builder;
 import lombok.Data;
 
