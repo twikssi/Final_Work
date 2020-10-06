@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 
+import static by.twikss.finalwork.database.DataBase.*;
 import static org.junit.Assert.*;
 
 public class ProductServiceTest {
@@ -27,9 +28,9 @@ public class ProductServiceTest {
                 .price(BigDecimal.valueOf(5.19))
                 .build();
 
-        ProductService.addProduct(dataBaseProducts.getBaseOfProduct(), parrot);
+        ProductService.addProduct(baseOfProduct, parrot);
 
-        assertTrue(dataBaseProducts.getBaseOfProduct().contains(parrot));
+        assertTrue(baseOfProduct.contains(parrot));
     }
 
     @Test
@@ -41,7 +42,7 @@ public class ProductServiceTest {
                 .price(BigDecimal.valueOf(60.0))
                 .build();
 
-        assertEquals(true,ProductService.getProductById(dataBaseProducts.getBaseOfProduct(),4l).equals(pineapple));
+        assertEquals(true,ProductService.getProductById(baseOfProduct,4l).equals(pineapple));
     }
 
     @Test
@@ -53,8 +54,8 @@ public class ProductServiceTest {
                 .category(Category.FRUIT)
                 .build();
 
-        ProductService.deleteProductById(dataBaseProducts.getBaseOfProduct(), 3l);
-        assertFalse(dataBaseProducts.getBaseOfProduct().contains(orange));
+        ProductService.deleteProductById(baseOfProduct, 3l);
+        assertFalse(baseOfProduct.contains(orange));
 
     }
 }

@@ -9,12 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DataBase {
-    private List<Product> baseOfProduct = new ArrayList<>();
-
-    public List<Product> getBaseOfProduct() {
-        return baseOfProduct;
-    }
-
+    public static List<Product> baseOfProduct = new ArrayList<>();
 
     public DataBase() {
         baseOfProduct.addAll(Arrays.asList(

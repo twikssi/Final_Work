@@ -4,6 +4,7 @@ import by.twikss.finalwork.database.DataBase;
 import by.twikss.finalwork.logics.service.ProductService;
 
 import static by.twikss.finalwork.App.*;
+import static by.twikss.finalwork.database.DataBase.baseOfProduct;
 
 public class Menu {
     DataBase dataBaseProduct = new DataBase();
@@ -21,17 +22,20 @@ public class Menu {
                     break;
                 case 2:
                     log.info("Input id product that you want to see");
-                    log.info(ProductService.getProductById(dataBaseProduct.getBaseOfProduct()
+                    log.info(ProductService.getProductById(baseOfProduct
                             ,InputUserData.userChooseDeleteProductById())
                     .toString());
+                    InputUserData.userPressEnter();
                     break;
                 case 3:
-                    ProductService.showAllProducts(dataBaseProduct.getBaseOfProduct());
+                    ProductService.showAllProducts(baseOfProduct);
+                    InputUserData.userPressEnter();
                     break;
                 case 4:
                     log.info("Input id product that you want to delete");
-                    ProductService.deleteProductById(dataBaseProduct.getBaseOfProduct()
+                    ProductService.deleteProductById(baseOfProduct
                             ,InputUserData.userChooseDeleteProductById());
+                    InputUserData.userPressEnter();
                     break;
                 default:
                     log.info("There is no menu section");
