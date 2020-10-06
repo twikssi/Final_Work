@@ -32,6 +32,7 @@ public class ProductService {
         for (Product product: productsBase){
             if (product.getId() == id){
                 productsBase.remove(product);
+                return;
             }
         }
     }

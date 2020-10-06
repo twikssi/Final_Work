@@ -8,4 +8,8 @@ public class InputUserData {
     public static int userChooseMenu(){
         return in.nextInt();
     }
+
+    public static long userChooseDeleteProductById(){
+        return in.nextLong();
+    }
 }
