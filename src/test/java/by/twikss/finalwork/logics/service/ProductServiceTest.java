@@ -45,6 +45,7 @@ public class ProductServiceTest {
         assertEquals(true,ProductService.getProductById(baseOfProduct,4l).equals(pineapple));
     }
 
+
     @Test
     public void deleteProductByIdTest() {
         Product orange = Product.builder()
@@ -55,7 +56,6 @@ public class ProductServiceTest {
                 .build();
 
         ProductService.deleteProductById(baseOfProduct, 3l);
-        assertFalse(baseOfProduct.contains(orange));
-
+        assertEquals(false,baseOfProduct.contains(orange));
     }
 }

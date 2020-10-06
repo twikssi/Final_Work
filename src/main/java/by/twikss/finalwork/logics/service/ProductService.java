@@ -8,6 +8,8 @@ import static by.twikss.finalwork.App.*;
 
 public class ProductService {
 
+    private ProductService() {
+    }
 
     public static void addProduct(List<Product> productBase, Product product) {
         productBase.add(product);

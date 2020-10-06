@@ -9,9 +9,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DataBase {
-    public static List<Product> baseOfProduct = new ArrayList<>();
+    public static List<Product> baseOfProduct;
 
     public DataBase() {
+        baseOfProduct = new ArrayList<>();
         baseOfProduct.addAll(Arrays.asList(
                 Product.builder()
                         .id(1l)

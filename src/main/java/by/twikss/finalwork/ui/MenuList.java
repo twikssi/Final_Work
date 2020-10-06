@@ -1,10 +1,11 @@
 package by.twikss.finalwork.ui;
 
-import by.twikss.finalwork.App;
-
 import static by.twikss.finalwork.App.log;
 
 public class MenuList {
+
+    private MenuList() {
+    }
 
     public static void show(){
         log.info("Choose menu section");

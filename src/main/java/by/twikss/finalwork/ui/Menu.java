@@ -7,7 +7,11 @@ import static by.twikss.finalwork.App.*;
 import static by.twikss.finalwork.database.DataBase.baseOfProduct;
 
 public class Menu {
-    DataBase dataBaseProduct = new DataBase();
+    DataBase dataBaseProduct;
+
+    public Menu() {
+        this.dataBaseProduct = new DataBase();
+    }
 
     public void runMenu(){
         boolean isWorking = true;

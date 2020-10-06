@@ -1,13 +1,14 @@
 package by.twikss.finalwork.ui;
 
-import by.twikss.finalwork.App;
-
 import java.util.Scanner;
 
 import static by.twikss.finalwork.App.log;
 
 public class InputUserData {
-    public static Scanner in = new Scanner(System.in);
+    public static final Scanner in = new Scanner(System.in);
+
+    private InputUserData() {
+    }
 
     public static int userChooseMenu(){
         return in.nextInt();
