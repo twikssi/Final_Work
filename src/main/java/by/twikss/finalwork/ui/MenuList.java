@@ -16,4 +16,10 @@ public class MenuList {
         log.info("3 - show list products");
         log.info("4 - delete product by id");
     }
+
+    public static void showCategories (){
+        log.info("Choose category");
+        log.info("1 - FRUIT");
+        log.info("2 - VEGETABLE");
+    }
 }

@@ -22,7 +22,16 @@ public class Menu {
                     isWorking = false;
                     break;
                 case 1:
-
+                    ProductService.addProduct(baseOfProduct,
+                            ProductService.buildPerson(
+                                    ProductService.getNextId(baseOfProduct),
+                                    InputUserData.userInputName(),
+                                    InputUserData.userInputPrice(),
+                                    InputUserData.userInputCategory(),
+                                    InputUserData.userInputDiscription(),
+                                    InputUserData.userInputDiscount()
+                            )
+                    );
                     break;
                 case 2:
                     log.info("Input id product that you want to see");

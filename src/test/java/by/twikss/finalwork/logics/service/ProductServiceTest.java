@@ -58,4 +58,16 @@ public class ProductServiceTest {
         ProductService.deleteProductById(baseOfProduct, 3l);
         assertEquals(false,baseOfProduct.contains(orange));
     }
+
+    @Test
+    public void buildPerson() {
+        String expected = "Product(id=5, name=Vova, price=4.5, category=FRUIT, discount=0.14, description=phh)";
+       assertEquals (expected, (ProductService.buildPerson(5l,"Vova", 4.50, Category.FRUIT, "phh", 0.14).toString()));
+    }
+
+    @Test
+    public void getNextId() {
+        long expected = 5l;
+        assertEquals(expected, ProductService.getNextId(baseOfProduct));
+    }
 }
