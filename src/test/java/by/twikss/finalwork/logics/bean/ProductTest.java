@@ -18,8 +18,7 @@ public class ProductTest {
                 .category(Category.VEGETABLES)
                 .build();
 
-        System.out.println(product.toString());
-        String expected = "Product(id=1, name=tolya, price=56.67, category=VEGETABLES, discount=null, description=null)";
+        String expected = "Product{id=1, name='tolya', price=56.67, category=VEGETABLES, discount=null, description='null' actual price =56.67}";
         String actual = product.toString();
         assertEquals(expected, actual);
     }

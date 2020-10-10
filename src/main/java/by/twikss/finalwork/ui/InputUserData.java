@@ -1,6 +1,5 @@
 package by.twikss.finalwork.ui;
 
-import by.twikss.finalwork.App;
 import by.twikss.finalwork.logics.enums.Category;
 
 import java.util.Scanner;
@@ -57,9 +56,6 @@ public class InputUserData {
             }
     }
 
-    public static long userInputLong() {
-        return in.nextLong();
-    }
 
     public static String userInputString() {
         return in.next();

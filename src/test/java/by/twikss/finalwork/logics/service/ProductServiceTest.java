@@ -61,7 +61,7 @@ public class ProductServiceTest {
 
     @Test
     public void buildPerson() {
-        String expected = "Product(id=5, name=Vova, price=4.5, category=FRUIT, discount=0.14, description=phh)";
+        String expected = "Product{id=5, name='Vova', price=4.5, category=FRUIT, discount=0.14, description='phh' actual price =3.87}";
        assertEquals (expected, (ProductService.buildPerson(5l,"Vova", 4.50, Category.FRUIT, "phh", 0.14).toString()));
     }
 
